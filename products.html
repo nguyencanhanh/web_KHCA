@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm - IoT Water Solutions Pro</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        secondary: '#00a8e8'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    
+    <!-- Products Header -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-4">Danh Mục Sản Phẩm</h1>
+            <p class="text-xl text-center text-gray-600 max-w-2xl mx-auto">
+                Khám phá các giải pháp nước thông minh của chúng tôi với công nghệ IoT tiên tiến
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        
+        // Load products dynamically
+        document.addEventListener('DOMContentLoaded', async function() {
+            const productsGrid = document.getElementById('products-grid');
+            const products = await productAPI.getProducts();
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden card-hover';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">${product.name}</h3>
+                        <p class="text-gray-600 mb-4">${product.description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">${formatPrice(product.price)}</span>
+                            <a href="/products/${product.category}.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                Chi tiết
+                            </a>
+                        </div>
+                    </div>
+                `;
+                productsGrid.appendChild(productCard);
+            });
+        });
+    </script>
+</body>
+</html>

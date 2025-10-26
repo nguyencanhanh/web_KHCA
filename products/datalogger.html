@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Logger - IoT Water Solutions Pro</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        secondary: '#00a8e8'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    
+    <!-- Product Detail -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="http://static.photos/technology/1200x630/101" alt="Data Logger" class="w-full rounded-xl shadow-lg">
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Data Logger</h1>
+                    <p class="text-2xl font-bold text-primary mb-6">12.500.000 VNĐ</p>
+                    
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-3">Mô Tả Sản Phẩm</h2>
+                        <p class="text-gray-600 leading-relaxed" id="product-description">
+                        Data Logger là thiết bị ghi nhận dữ liệu nước thông minh với độ chính xác cao. 
+                        Sản phẩm được thiết kế để thu thập, lưu trữ và truyền tải dữ liệu về lưu lượng, 
+                        áp suất và chất lượng nước trong thời gian thực.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-3">Tính Năng Chính</h2>
+                        <ul class="text-gray-600 list-disc list-inside space-y-2">
+                            <li>Độ chính xác ±0.5%</li>
+                            <li>Truyền dữ liệu 4G/LoRaWAN</li>
+                            <li>Pin sạc kéo dài 5 năm</li>
+                            <li>Chống nước IP68</li>
+                            <li>Báo cáo thời gian thực</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <button class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Đặt hàng ngay
+                        </button>
+                        <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition duration-300">
+                            Liên hệ tư vấn
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Thông Số Kỹ Thuật</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+                <table class="data-table w-full">
+                    <tbody>
+                        <tr>
+                            <td class="font-semibold text-gray-700">Phạm vi đo lường</td>
+                            <td class="text-gray-600">0.1 - 1000 m³/h</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold text-gray-700">Độ chính xác</td>
+                            <td class="text-gray-600">±0.5%</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold text-gray-700">Kết nối</td>
+                            <td class="text-gray-600">4G, LoRaWAN, Ethernet</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold text-gray-700">Pin</td>
+                            <td class="text-gray-600">Lithium 10Ah (5 năm)</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold text-gray-700">Chuẩn bảo vệ</td>
+                            <td class="text-gray-600">IP68</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold text-gray-700">Nhiệt độ hoạt động</td>
+                            <td class="text-gray-600">-20°C đến 60°C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

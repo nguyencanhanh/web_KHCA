@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Water Solutions Pro - Giải pháp nước thông minh</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        secondary: '#00a8e8'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl font-bold mb-6">Giải Pháp Nước Thông Minh IoT</h1>
+                <p class="text-xl mb-8">Công nghệ tiên tiến cho quản lý nước hiệu quả và bền vững</p>
+                <div class="flex gap-4 justify-center">
+                    <a href="#products" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                        Khám phá sản phẩm
+                    </a>
+                    <a href="/admin.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                        Quản trị
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Overview -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Sản Phẩm Của Chúng Tôi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Data Logger Card -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+                    <img src="http://static.photos/technology/640x360/101" alt="Data Logger" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Data Logger</h3>
+                        <p class="text-gray-600 mb-4">Thiết bị ghi nhận dữ liệu nước thông minh với độ chính xác cao</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">12.500.000 VNĐ</span>
+                            <a href="/products/datalogger.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                Chi tiết
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pressure Regulator Card -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+                    <img src="http://static.photos/industry/640x360/102" alt="Pressure Regulator" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bộ Điều Áp Tự Động</h3>
+                        <p class="text-gray-600 mb-4">Điều chỉnh áp lực nước tự động với công nghệ IoT tiên tiến</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">8.750.000 VNĐ</span>
+                            <a href="/products/pressure-regulator.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                Chi tiết
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AMR Device Card -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+                    <img src="http://static.photos/science/640x360/103" alt="AMR Device" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Thiết Bị Đọc Tự Động</h3>
+                        <p class="text-gray-600 mb-4">Giải pháp đọc đồng hồ nước tự động từ xa</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">15.200.000 VNĐ</span>
+                            <a href="/products/amr.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                Chi tiết
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Tính Năng Nổi Bật</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="shield" class="text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Bảo Mật Cao</h3>
+                    <p class="text-gray-600">Hệ thống bảo mật đa lớp với mã hóa end-to-end</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-secondary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="refresh-cw" class="text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Cập Nhật Thời Gian Thực</h3>
+                    <p class="text-gray-600">Dữ liệu được cập nhật liên tục và hiển thị trực quan</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="bar-chart-2" class="text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Báo Cáo Thông Minh</h3>
+                    <p class="text-gray-600">Phân tích dữ liệu và báo cáo tự động với AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
